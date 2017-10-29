@@ -48,7 +48,7 @@ config :mithril_api, Mithril.Web.Endpoint,
 # SASL reports turned off because of their verbosity.
 config :logger,
   backends: [LoggerJSON],
-  level: :info,
+  level: {:system, :atom, "APP_LOG_LEVEL", :info},
   # handle_sasl_reports: true,
   handle_otp_reports: true
 
